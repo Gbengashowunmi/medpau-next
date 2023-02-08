@@ -16,7 +16,7 @@ export default function ProductCard({ image, productName,id }) {
           
 
           <div className={styles.add_to_cart}>
-    <Link href={`/shop/${id}`}>
+    <Link href={`/shop/Shop/${id}`}>
             <p>Read More</p>
           </Link>
           </div>

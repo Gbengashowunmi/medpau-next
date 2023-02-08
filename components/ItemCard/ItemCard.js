@@ -7,7 +7,7 @@ export default function ItemCard({image,productName, id}) {
   return (
     <div className={styles.item_container}>
         <div className={styles.image}>
-          <Link href={`/shop/${id}`}>  <Image src={image} alt="product" width={900} height={900} />
+          <Link href={`/shop/Shop/${id}`}>  <Image src={image} alt="product" width={900} height={900} />
           </Link>
         </div>
         <div className={styles.description}>
