@@ -3,7 +3,9 @@ import data from "components/Data";
 import HeadFoot from "components/HeadFoot/HeadFoot/HeadFoot";
 import ItemCard from "components/ItemCard/ItemCard";
 import Layout from "components/Layout";
+import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styles from "./productDetail.module.scss";
@@ -15,10 +17,9 @@ export default function ProductDetail() {
   },[])
   
   const router = useRouter()
-  const { pid } = router.query
-  console.log(pid);
-//   const [product] = data.filter(singleProduct => singleProduct.id === +id)
-
+  const { id } = router.query
+  const [product] = data.filter(singleProduct => singleProduct.id === +id)
+console.log(product.image);
   return (
     <Layout title="Medpau Shop" description="the-dynamic-description">
     <HeadFoot>
@@ -26,12 +27,12 @@ export default function ProductDetail() {
         <section className={styles.hero_section}>
           <div className={styles.product_img}>
             <div className={styles.main_img}>
-              <img
+              <Image width={900} height={900} 
                 src={product.image}
                 alt="product"
+                className={styles.img}
               />
-            </div>
-
+</div>
           </div>
           <div className={styles.product_info}>
             <h2>{product.name}</h2>

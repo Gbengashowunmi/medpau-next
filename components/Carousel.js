@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import Slider from "react-slick";
 
@@ -18,7 +19,7 @@ export default function Carousel() {
       <div className="carousel-item">
         <div className="overlay"></div>
         <div className="image">
-          <img
+          <Image width={900} height={900}
             className="d-block w-100"
             src="/images/her-bg-slider.jpg"
             alt="Second slide"
@@ -34,7 +35,7 @@ export default function Carousel() {
       <div className="overlay"></div>
 
         <div className="image">
-          <img
+          <Image width={900} height={900}
             className="d-block w-100"
             src="/images/hero-image11111.jpg"
             alt="Second slide"
@@ -54,7 +55,7 @@ export default function Carousel() {
       <div className="overlay"></div>
 
         <div className="image">
-          <img
+          <Image width={900} height={900}
             className="d-block w-100"
             src="/images/hero_home_01.jpg"
             alt="First slide"
