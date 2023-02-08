@@ -49,7 +49,7 @@ export default function HeadFoot({ children }) {
             {" "}
             <Link href="/">
               <Image
-                src="/images/WhatsApp_Image_2023-01-23_at_9.13.05_AM-removebg-preview.png" width={500} height={500}
+                src="/images/WhatsApp_Image_2023-01-23_at_9.13.05_AM-removebg-preview.png" 
                 alt="logo"
                 width={900}
                 height={900}
